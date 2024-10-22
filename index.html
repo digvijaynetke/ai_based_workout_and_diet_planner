@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Based Diet and Workout Planner</title>
+    <link rel="stylesheet" href="/static/style.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <nav class="navbar">
+        <div>
+            <a class="navbar-logo" aria-label="navigation bar">
+                <img src="/static/images/logo_workout.png" alt="logo" class="navbar-img">
+                <div class="navbar-brand">
+                    <span class="navbar_des">Diet and workout with AI</span>
+                    <span class="navbar_des_below">YOUR ONLINE DIET ASSISTANT</span>
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <div class="section-container">
+        <h1 class="heading_main">Simplify your life with <strong class="Ai">AI</strong></h1>
+        <p class="parades">Start now to use our free services powered by Artificial Intelligence,designed to Simplify
+            and enrich your life</p>
+        
+        <a href="diet_form.html" class="section" id="diet-maker">
+            <img src="/static/images/diet_section.jpg" alt="Diet Maker">
+            <h3>Diet Maker</h3>
+        </a>
+        <a href="doctor.html" class="section" id="doctor-meet">
+            <img src="/static/images/doctor_icon2.png" alt="Doctor Meet">
+            <h3>Doctor Meet</h3>
+        </a>
+        <a href="gymtrainer.html" class="section" id="gym-trainer">
+            <img src="/static/images/gym_trainer.jpg" alt="Gym Trainer">
+            <h3>Gym Trainer</h3>
+        </a>
+        <a href="dietian.html" class="section" id="dietitian">
+            <img src="/static/images/dietitian_icon1.png" alt="Dietitian">
+            <h3>Dietitian</h3>
+        </a>
+        <a href="shopping.html" class="section" id="shopping">
+            <img src="/static/images/shopping_icon.png" alt="shopping">
+            <h3>Shopping</h3>
+        </a>
+    </div>
+    
+    <section class="about_us">
+        <div class="about">
+            <h1>About Us</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, velit corrupti. Quo, tempore maiores accusantium ab rem dolorum fuga praesentium sunt nobis, velit dolor quidem cum corporis exercitationem voluptate reiciendis.
+            </p>
+            <ul>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, incidunt!</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, incidunt!</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, incidunt!</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, incidunt!</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, incidunt!</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, incidunt!</li>
+            </ul>
+        </div>
+        <div class="key_features">
+            <h1>Key Features</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit veritatis culpa distinctio modi sunt, fugit natus debitis dolorum soluta aliquid maiores numquam cumque sint odit deleniti aperiam labore quia minus. Ullam natus neque sapiente debitis, suscipit fugit. Odio, autem dolorem ratione facilis at possimus porro eaque tempora nemo, saepe excepturi!</p>
+            <ul>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, incidunt!</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, incidunt!</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, incidunt!</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, incidunt!</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, incidunt!</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, incidunt!</li>
+            </ul>
+        </div>
+    </section>
+    <script>
+        document.getElementById('diet-maker').addEventListener('click', function() {
+            document.querySelector('.user-input-section').style.display = 'block';
+            window.scrollTo({ top: document.querySelector('.user-input-section').offsetTop, behavior: 'smooth' });
+        });
+    </script>
+    <!-- Botpress Webchat Scripts -->
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2024/10/15/16/20241015165317-6TZDE922.js"></script>
+    
+    <script>
+        // Button element
+        const openChatButton = document.getElementById('open-chat-button');
+        const chatContainer = document.getElementById('chat-container');
+        const chatIframe = document.getElementById('chat-iframe');
+    
+        // Function to open chat when button is clicked
+        openChatButton.addEventListener('click', function () {
+            // Load Botpress webchat in the iframe
+            chatIframe.src = 'https://cdn.botpress.cloud/webchat/v2.2/index.html';
+    
+            // Show the chat container with the specific size
+            chatContainer.style.display = 'block';
+        });
+    
+        // Botpress webchat configuration
+        window.botpressWebChat.init({
+            hostUrl: "https://cdn.botpress.cloud/webchat/v2.2",
+            botId: "mau-bot",  // Use your actual Botpress bot ID
+            botName: "Nutri-bot",  // Set your desired bot name
+        });
+    </script>
+    
+</body>
+</html>
