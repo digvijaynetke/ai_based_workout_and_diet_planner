@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Maker</title>
+    <link rel="stylesheet" href="/static/style.css"> <!-- Use the same CSS file -->
+</head>
+<body>
+    <nav class="navbar">
+        <div>
+            <a class="navbar-logo" aria-label="navigation bar">
+                <img src="/static/images/logo_workout.png" alt="logo" class="navbar-img">
+                <div class="navbar-brand">
+                    <span class="navbar_des">Diet and workout with AI</span>
+                    <span class="navbar_des_below">YOUR ONLINE DIET ASSISTANT</span>
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <section class="user-input-section">
+        <div class="user-input-container">
+            <h2>Enter Your Details</h2>
+            <form id="user-details-form" method="POST" action="/diet_form.html"> <!-- Make sure the form action points to the correct Flask route -->
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" name="height" required >
+
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="diet-type">Diet Type:</label>
+                <select id="diet-type" name="diet-type" required>
+                    <option value="balanced">Balanced</option>
+                    <option value="high-protein">High Protein</option>
+                    <option value="low-carb">Low Carb</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="vegetarian">Vegetarian</option>
+                </select>
+
+                <label for="workout-type">Workout Type:</label>
+                <select id="workout-type" name="workout-type" required>
+                    <option value="cardio">Cardio</option>
+                    <option value="strength">Strength Training</option>
+                    <option value="flexibility">Flexibility</option>
+                    <option value="mixed">Mixed Workout</option>
+                </select>
+
+                <label for="goal">Goal:</label>
+                <select id="goal" name="goal" required>
+                    <option value="lose-weight">Lose Weight</option>
+                    <option value="gain-weight">Gain Weight</option>
+                    <option value="maintain-weight">Maintain Weight</option>
+                </select>
+
+                <label for="health-issues">Health Issues:</label>
+                <select id="health-issues" name="health-issues">
+                    <option value="none">None</option>
+                    <option value="diabetes">Diabetes</option>
+                    <option value="hypertension">Hypertension</option>
+                    <option value="heart-disease">Heart Disease</option>
+                    <option value="thyroid">Thyroid Issues</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="physical-activity">Physical Activity:</label>
+                <select id="physical-activity" name="physical-activity" required>
+                    <option value="sedentary">Sedentary</option>
+                    <option value="light">Light Activity</option>
+                    <option value="moderate">Moderate Activity</option>
+                    <option value="active">Active</option>
+                    <option value="very-active">Very Active</option>
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Display recommendations if available -->
+    {% if recommended_diet and recommended_workout %}
+    <section class="results-section">
+        <h2>Your AI-Based Recommendations</h2>
+        <p><strong>Recommended Diet Plan:</strong> {{ recommended_diet }}</p>
+        <p><strong>Recommended Workout Plan:</strong> {{ recommended_workout }}</p>
+    </section>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Recommendations</title>
+    <link rel="stylesheet" href="/static/results.css"> <!-- Use your CSS file -->
+</head>
+<body>
+    <nav class="navbar">
+        <div>
+            <a class="navbar-logo" aria-label="navigation bar">
+                <img src="/static/images/logo_workout.png" alt="logo" class="navbar-img">
+                <div class="navbar-brand">
+                    <span class="navbar_des">Diet and workout with AI</span>
+                    <span class="navbar_des_below">YOUR ONLINE DIET ASSISTANT</span>
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <section class="results-section">
+        <h1>Recommendations</h1>
+        <p>Recommended Diet: {{ recommended_diet }}</p>
+        <p>Recommended Workout: {{ recommended_workout }}</p>
+
+        <h2>Diet Recommendation Graph</h2>
+        <img src="data:image/png;base64,{{ diet_graph }}" alt="Diet Recommendation Graph">
+
+        <h2>Workout Recommendation Graph</h2>
+        <img src="data:image/png;base64,{{ workout_graph }}" alt="Workout Recommendation Graph">
+    </section>
+</body>
+</html>
