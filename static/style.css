@@ -1,0 +1,402 @@
+/* Global Styles */
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    <img src="/static/images/logo_workout.png" alt="logo" class="navbar-img">
+
+} */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/static/images/left_sideback.png'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire background */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    background-attachment: fixed; /* Keep the background fixed when scrolling */
+    background-position: center; /* Center the background image */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Optional: Adding some styling to ensure text is readable over the background */
+.section-container, .about_us {
+    /* background-color: rgba(255, 255, 255, 0.8); White background with opacity */
+    padding: 20px;
+    border-radius: 10px;
+}
+.heading_main {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 10px;
+    /* Adding an effect - let's use a text shadow */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    /* Optional: Add a hover effect */
+    transition: transform 0.3s ease;
+}
+
+.heading_main:hover {
+    transform: scale(1.05); /* Slightly increase the size on hover */
+}
+
+.parades {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 0; /* This will ensure the paragraph is right below the heading */
+    color: #b3092bc8;
+    font-weight: 600;
+}
+.Ai{
+    color: red;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #79838d; /* Navigation bar background color */
+    color: rgb(234, 30, 30);
+    padding: 15px 20px; /* Adjust padding for height */
+    position: fixed; /* Make the navbar stay at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top of other content */
+    display: flex;
+    justify-content: center; /* Center the logo and description */
+    align-items: center; /* Center the content vertically */
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-img {
+    width: 80px;
+    height: 65px;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.navbar-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar_des {
+    font-weight: 800;
+    font-size: 32px;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(7, 11, 10);
+}
+
+.navbar_des_below {
+    font-weight: 800;
+    font-size: 12px;
+    margin-top: -5px;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(7, 11, 10);
+}
+
+/* Section Styles */
+.section-container {
+    display: flex;
+    flex-direction: column; /* Arrange sections in a column */
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0 50px; /* Add top margin to accommodate fixed navbar */
+    padding-top: 30px; /* Avoid content hidden behind navbar */
+}
+a{
+    text-decoration: none;
+}
+.section {
+    padding: 20px;
+    /* border: 1px solid #c2bebe; */
+    border-radius: 100px;
+    text-align: center;
+    width: 40%; /* Adjust width for centered layout */
+    margin-bottom: 20px;
+    cursor: pointer;
+    /* background-color: #f9f9f9; */
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section:hover {
+    background-color: #e0e0e0;
+}
+
+.section h3 {
+    font-size: 1.5em;
+    color: #49c9a8; /* Match button color */
+    margin-top: 10px;
+}
+
+/* Image Styling */
+.section img {
+    width: 100px; /* Set a fixed width for images */
+    height: 100px; /* Set a fixed height for images */
+    border-radius: 50%; /* Make images circular */
+    object-fit: cover; /* Ensure images cover the space */
+    margin-bottom: 15px;
+}
+
+/* User Input Section Styles */
+.user-input-section {
+    display: flex;
+    justify-content: center; /* Center the form horizontally */
+    align-items: center;
+    min-height: 100vh; /* Ensure the section takes full viewport height */
+    background-color: transparent; /* Light background for contrast */
+    padding: 20px; /* Add some padding around the section */
+}
+
+.user-input-container {
+    background-color: white; /* White background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%;
+    max-width: 600px; /* Limit the width of the form */
+}
+
+h2 {
+    text-align: center; /* Center the heading text */
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333; /* Darker color for the heading */
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Stack the form elements vertically */
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="number"] {
+    width: 100%; /* Make number inputs full width */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #49c9a8; /* Button background color */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #42b89a; /* Darker shade on hover */
+}
+
+.famous-doctors-section h2 {
+    color: black;
+    transition: color 0.3s ease; /* Smooth transition for both color and size */
+}
+
+.famous-doctors-section h2:hover {
+    color: red; /* Change to your desired hover color */
+}
+
+.doctor-list-section h2{
+    color: black;
+    transition: color 0.3s ease; 
+}
+.doctor-list-section h2:hover {
+    color: red; /* Change to your desired hover color */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-container {
+        width: 100%;
+    }
+
+    .section {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .user-input-container {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+
+/* doctor -section */
+.doctor-list-section, .famous-doctors-section {
+    padding: 50px 20px;
+    background-color: transparent;
+    text-align: center;
+    margin-top: 100px; /* Add margin-top to push content below navbar */
+}
+
+h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Doctor cards styling */
+.doctor-cards, .famous-doctor-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.doctor-card, .famous-doctor-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+}
+
+.doctor-card:hover, .famous-doctor-card:hover {
+    transform: translateY(-10px); /* Slightly lift the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.doctor-img, .famous-doctor-img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+}
+
+.doctor-img:hover, .famous-doctor-img:hover {
+    transform: scale(1.1); /* Scale the image on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add subtle shadow on hover */
+}
+
+h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.about-doctor {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Famous doctors section styling */
+.famous-doctor-card {
+    width: 250px;
+}
+
+
+/* About section */
+.about_us {
+    display: flex; /* Use flexbox to align the divs side by side */
+    justify-content: center; /* Space out the two sections evenly */
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    padding: 40px 20px; /* Padding around the section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: Arial, sans-serif; /* Set a clean font */
+    gap: 20px; /* Space between the two divs */
+}
+.about_us > div {
+    flex: 1; /* Makes each div take up equal space */
+    max-width: 48%; /* Limits the width of each div */
+    background-color: #ffffff; /* White background for contrast */
+    padding: 20px; /* Adds padding inside each div */
+    border-radius: 8px; /* Rounds the corners of each div */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a smaller shadow for the divs */
+    transition: transform 0.3s ease;
+}
+
+.about_us > div:hover {
+    transform: scale(1.0); /* Slightly enlarges the box on hover */
+    box-shadow: 100 8px 16px rgba(0, 0, 0, 0.2); /* Deepens the shadow on hover */
+    background-color: #958282; /* Light gray background on hover */
+}
+.about_us h1 {
+    font-size: 2em; /* Sets the heading size */
+    color: #333; /* Darker text color for the heading */
+    margin-bottom: 15px; /* Adds space below the heading */
+    text-align: center; /* Centers the heading */
+}
+
+.about_us p {
+    font-size: 1em; /* Standard paragraph font size */
+    color: #100f0f; /* Medium gray for the paragraph text */
+    line-height: 1.6; /* Improves readability */
+    margin-bottom: 20px; /* Adds space below the paragraph */
+    text-align: center; /* Justifies the paragraph text */
+}
+
+.about_us ul {
+    padding-left: 20px; /* Indents the list items */
+    list-style-type: disc; /* Uses a disc for list item markers */
+    color: #333; /* Darker text color for the list items */
+}
+
+.about_us ul li {
+    margin-bottom: 10px; /* Adds space between each list item */
+    line-height: 1.5; /* Improves readability of list items */
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .about_us {
+        flex-direction: column; /* Stacks the divs vertically on smaller screens */
+        align-items: center; /* Centers the divs when stacked */
+    }
+
+    .about_us > div {
+        max-width: 100%; /* Allows each div to take full width when stacked */
+    }
+
+    .about_us h1 {
+        font-size: 1.8em; /* Slightly smaller heading size on mobile */
+    }
+}
+
+/*botpress Style*/
+#botpress-webchat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 400px; /* Adjust as per your preference */
+    height: 600px; /* Adjust as per your preference */
+    z-index: 9999;
+}
+
+/* Optional: Styling the chatbot frame */
+#botpress-webchat iframe {
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}

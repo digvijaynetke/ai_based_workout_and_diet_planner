@@ -1,0 +1,125 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/static/images/left_sideback.png'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire background */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    background-attachment: fixed; /* Keep the background fixed when scrolling */
+    background-position: center; /* Center the background image */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Flexbox for vertical and horizontal centering */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    min-height: 100vh; /* Full viewport height */
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #79838d; /* Navigation bar background color */
+    color: rgb(234, 30, 30);
+    padding: 15px 20px; /* Adjust padding for height */
+    position: fixed; /* Make the navbar stay at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top of other content */
+    display: flex;
+    justify-content: center; /* Center the logo and description */
+    align-items: center; /* Center the content vertically */
+    text-align: center;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-img {
+    width: 80px;
+    height: 65px;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.navbar-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar_des {
+    font-weight: 800;
+    font-size: 32px;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(7, 11, 10);
+}
+
+.navbar_des_below {
+    font-weight: 800;
+    font-size: 12px;
+    margin-top: -5px;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(7, 11, 10);
+}
+
+/* Recommendations Section */
+.results-section {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background to reveal background image */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px; /* Adjust for spacing from fixed navbar */
+}
+
+.results-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #8d9cba;
+}
+
+.results-section p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.results-section strong {
+    color: #3b5998;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-img {
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .navbar_des {
+        font-size: 1.2rem;
+    }
+
+    .results-section {
+        padding: 20px;
+        margin-top: 80px; /* Adjust for spacing on smaller screens */
+    }
+
+    .results-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .results-section p {
+        font-size: 1rem;
+    }
+}
