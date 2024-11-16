@@ -12,7 +12,7 @@ import base64
 app = Flask(__name__)
 
 # Load and preprocess data
-file_path = "C:/Users/Aditya Umesh Pawar/Desktop/ML/Python/Merged file.csv"
+file_path = "C:/Users/digvi/OneDrive/Desktop/AI_Diet_Project/Project/Merged file.csv"
 data = pd.read_csv(file_path)
 
 # Preprocess the dataset
@@ -56,7 +56,7 @@ model_diet.fit(X_train_preprocessed, y_train_diet)
 model_workout = RandomForestClassifier(random_state=42)
 model_workout.fit(X_train_preprocessed, y_train_workout)
 
-# create graph
+
 def create_graph(title, labels, values):
     fig, ax = plt.subplots(figsize=(6, 4))  # Set figure size
     # Ensure there's a small value for non-selected options to display all bars
