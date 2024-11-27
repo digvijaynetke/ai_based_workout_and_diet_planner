@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,4 +19,116 @@
         </div>
     </nav>
 </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping - AI-Based Diet and Workout Planner</title>
+    <link rel="stylesheet" href="/static/shopping.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div>
+            <a href="index.html" class="navbar-logo" aria-label="Home">
+                <img src="/static/images/logo_workout.png" alt="logo" class="navbar-img">
+                <div class="navbar-brand">
+                    <span class="navbar_des">Diet and workout with AI</span>
+                    <span class="navbar_des_below">YOUR ONLINE DIET ASSISTANT</span>
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <main class="shopping-container">
+        <h1>AI-Powered Shopping Recommendations</h1>
+        <p>Get personalized product recommendations based on your diet and workout plan.</p>
+
+        <section class="product-categories">
+            <h2>Product Categories</h2>
+            <div class="category-grid">
+                <a href="#" class="category-item">
+                    <img src="/static/images/category_supplements.jpg" alt="Supplements" class="category-img">
+                    <h3>Supplements</h3>
+                </a>
+                <a href="#" class="category-item">
+                    <img src="/static/images/category_equipment.jpg" alt="Workout Equipment" class="category-img">
+                    <h3>Workout Equipment</h3>
+                </a>
+                <a href="#" class="category-item">
+                    <img src="/static/images/category_healthy_foods.jpg" alt="Healthy Foods" class="category-img">
+                    <h3>Healthy Foods</h3>
+                </a>
+                <a href="#" class="category-item">
+                    <img src="/static/images/category_meal_prep.jpg" alt="Meal Prep Tools" class="category-img">
+                    <h3>Meal Prep Tools</h3>
+                </a>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="/static/images/product_protein.jpg" alt="Whey Protein" class="product-img">
+                    <h3>Premium Whey Protein</h3>
+                    <p>High-quality protein supplement for muscle recovery and growth.</p>
+                    <button class="btn-primary">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="/static/images/product_resistance_bands.jpg" alt="Resistance Bands" class="product-img">
+                    <h3>Resistance Band Set</h3>
+                    <p>Versatile workout equipment for strength training at home or gym.</p>
+                    <button class="btn-primary">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="/static/images/product_blender.jpg" alt="Blender" class="product-img">
+                    <h3>High-Power Blender</h3>
+                    <p>Perfect for making nutritious smoothies and meal prep.</p>
+                    <button class="btn-primary">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="/static/images/product_meal_containers.jpg" alt="Meal Prep Containers" class="product-img">
+                    <h3>Meal Prep Containers</h3>
+                    <p>Durable, portion-controlled containers for organized meal planning.</p>
+                    <button class="btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 AI-Based Diet and Workout Planner. All rights reserved.</p>
+    </footer>
+
+    <!-- Botpress Webchat Scripts -->
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2024/10/15/16/20241015165317-6TZDE922.js"></script>
+    <script>
+        window.botpressWebChat.init({
+            hostUrl: "https://cdn.botpress.cloud/webchat/v2.2",
+            botId: "mau-bot",
+            botName: "Nutri-bot",
+        });
+    </script>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
+
+<script>
+  const scrollToTopButton = document.getElementById('scrollToTop');
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 100) {
+      scrollToTopButton.style.display = 'flex';
+    } else {
+      scrollToTopButton.style.display = 'none';
+    }
+  });
+
+  scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</body>
 </html>
+
